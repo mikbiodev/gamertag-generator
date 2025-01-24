@@ -1,7 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     display: flex;
@@ -10,29 +16,37 @@ body {
     height: 100vh;
 }
 
+/* Container */
 .container {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     padding: 20px;
     text-align: center;
 }
 
-h2 {
-    color: #007bff;
-    margin-bottom: 15px;
+/* Headings */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
+p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+/* Buttons */
 button {
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em;
     margin: 5px 0;
     width: 100%;
 }
@@ -41,32 +55,37 @@ button:hover {
     background-color: #0056b3;
 }
 
-select, input[type="text"] {
+/* Input Fields */
+input[type="text"], select {
     width: 100%;
-    padding: 8px;
-    margin: 5px 0;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 14px;
+    font-size: 1em;
 }
 
-p {
-    margin: 10px 0;
+/* Dynamic Output */
+#output {
+    margin-top: 20px;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-}
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
 
-div {
-    margin-bottom: 15px;
-}
+    p {
+        font-size: 0.9em;
+    }
 
-.vertical-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    input[type="text"], select {
+        font-size: 0.9em;
+    }
 }
